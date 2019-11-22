@@ -32,8 +32,13 @@
 // document.write(12+12);
 
 function practiceFunction() {
-    var str ="This text is green!";
+    var str = "This text is green!";
     var result = str.fontcolor('green');
     document.getElementById("buttonClicked").innerHTML = result;
+}
+
+function bigImg(x) {
+    x.style.height = "64px";
+    x.style.width = "64px";
 }
 
