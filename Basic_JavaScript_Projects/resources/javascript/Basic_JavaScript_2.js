@@ -3,3 +3,9 @@ function blueText() {
     var result = str.fontcolor('blue');
     document.getElementById("buttonClicked").innerHTML = result;
 }
+
+function concatenateFun () {
+    var sentence = "This is the first part ";
+    sentence += "a sentence.";
+    document.getElementById('concatenate').innerHTML = sentence;
+}
