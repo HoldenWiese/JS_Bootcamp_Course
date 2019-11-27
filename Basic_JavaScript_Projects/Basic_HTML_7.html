@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Step 130 -->
+        <!-- Global Variable -->
+        <h3>Global Variable printed below.</h3>
+        <p id="global"></p>
+
+        <!-- Local Variable -->
+        <h3> Local Variable printed below.</h3>
+        <p id="local" onclick="exampleLocal()">Click me.</p>
+
+        <!-- Intentional Error -->
+        <h3>Intentional Error below</h3>
+        <p id="anError" onclick="errorFun()">Click me! (Shouldn't work)</p>
+
+        <!-- Step 133 -->
+        <p id="theDate" onclick="dateFun()">Hello!</p>
+
+        <!-- Step 134 -->
+        <p id="ifStatement" onclick="myIfStatement()">Is 5 > 4? Click to find out.</p>
+
+        <!-- Step 136 if else statement example -->
+        <p id="instructions">How old are you?</p>
+        <input type="text" value="" id="ageInput">
+        <button onclick="canDrink()">Submit</button>
+        <p id="ageResponse"></p>
+
+        <!-- Step 138 -->
+        <p id="timeOfDay"></p>
+        <button onclick="timeFunction()">Click here to get the time.</button>
+
+
+    <script src="./resources/javascript/Basic_JavaScript_7.js"></script>
+</body>
+
+</html>
