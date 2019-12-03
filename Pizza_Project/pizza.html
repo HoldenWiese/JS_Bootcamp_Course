@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pizza Drill Demo</title>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" type="text/css" href="./css/pizza.css" />
+</head>
+
+<body>
+    <!-- Big Div for the whole menu. -->
+    <div id="menuBG">
+        <h1>Pizza Drill</h1>
+        <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+        <form id="frmMenu">
+
+            <div class="columns">
+
+                <!-- Radio buttons section  -->
+                <div class="menu left">
+                    <h3>Size: </h3>
+                    <input class="size" type="radio" name="Size" value="Personal Pizza"> Personal Pizza<br>
+                    <input class="size" type="radio" name="Size" value="Medium Pizza"> Medium Pizza<br>
+                    <input class="size" type="radio" name="Size" value="Large Pizza" checked> Large Pizza<br>
+                    <input class="size" type="radio" name="Size" value="Extra Large Pizza"> Extra Large Pizza<br>
+                    <input class="size" type="radio" name="Size" value="Massive Pizza"> Massive Pizza<br>
+                </div>
+
+                <!-- Vegatables -->
+                <div class="menu middle">
+                    <h3>Vegatables: </h3>
+                    <input class="meats" type="checkbox" name="Vegies" value="Carrots"> Carrots<br>
+                    <input class="meats" type="checkbox" name="Vegies" value="Peppers"> Peppers <br>
+                    <input class="meats" type="checkbox" name="Vegies" value="Pineapple"> Pineapple<br>
+                    <input class="meats" type="checkbox" name="Vegies" value="Tomatoe"> Tomatoe<br>
+                    <input class="meats" type="checkbox" name="Vegies" value="Mushroom"> Mushroom<br>
+                    <input class="meats" type="checkbox" name="Vegies" value="Olives"> Olives<br>
+                    <input class="meats" type="checkbox" name="Vegies" value="Onions"> Onions<br>
+                </div>
+
+                <!-- Check boxes section. -->
+                <div class="menu right">
+                    <h3>Meats: </h3>
+                    <input class="meats" type="checkbox" name="Meat" value="Pepperoni"> Pepperoni<br>
+                    <input class="meats" type="checkbox" name="Meat" value="Sausage"> Sausage <br>
+                    <input class="meats" type="checkbox" name="Meat" value="Canadian Bacon"> Canadian Bacon<br>
+                    <input class="meats" type="checkbox" name="Meat" value="Ground Beef"> Ground Beef<br>
+                    <input class="meats" type="checkbox" name="Meat" value="Anchovy"> Anchovy<br>
+                    <input class="meats" type="checkbox" name="Meat" value="Chicken"> Chicken<br>
+                    <input class="meats" type="checkbox" name="Meat" value="Turkey"> Turkey<br>
+                </div>
+
+            </div>
+
+
+
+
+            <div id="cart">
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+            </div>
+        </form>
+    </div>
+    <script src="./js/pizza.js"></script>
+</body>
+
+</html>
