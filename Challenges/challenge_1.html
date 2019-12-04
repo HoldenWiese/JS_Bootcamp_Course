@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Challenges</title>
+    <link rel="stylesheet" href="./resources/css/challenge_1.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div>
+        <nav>
+            <a href="#myImage"><span>Image</span></a>
+            <a href="#bottom"><span>Bottom of Page</span></a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <script>document.body.className += ' fade-out';</script>
+
+        <h1>Adjusting Font with vw!</h1>
+
+        <p>This page will fade in as the page loads!</p>
+        <p>Please fill out this form!</p>
+
+
+        <!-- Step 345 -->
+        <h4>Form validation Practice</h4>
+        <form action="" name="myForm" method="POST">
+            <input type="text" name="fname" id="" placeholder="Fullname" required>
+            <input type="text" name="fname" id="" placeholder="(800)-000-0000" required>
+            <input type="submit" value="Submit!" onsubmit="return validateForm()">
+        </form>
+        <!-- /Step 345 -->
+
+        <!-- step 351 -->
+        <h4 class="sticky">sticky element</h4>
+
+        <br><br><br>
+
+        <!-- Step 346 -->
+        <h4>Creating a popup form</h4>
+        <p>(Bottom right corner)</p>
+        <button class="open-button" onclick="openForm()">Open Form</button>
+
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+        <!-- /Step 346 -->
+
+        <br><br><br>
+
+        <!-- Step 347 -->
+        <div id="is347">
+            <h4>Keyframes</h4>
+            <div id="keyframe"></div>
+        </div>
+
+        <!-- Step 348 -->
+        <h4>Zoom in out of pic</h4>
+        <div>
+            <img id="myImage" class="zoom" src="./resources/zoom.jpeg" alt="">
+        </div>
+        <!-- /Step 348 -->
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Step 349 -->
+        <footer>
+            <h4 id="bottom">You are at the bottom of the page!</h4>
+        </footer>
+
+        <!-- Step 350 -->
+        <h4>Slideshow!</h4>
+        <div id="slideshow">
+            <div>
+                <img class="slideImg" src="./resources/1.jpg" alt="">
+            </div>
+            <div>
+                <img class="slideImg" src="./resources/2.jpg" alt="">
+            </div>
+            <div>
+                <img class="slideImg" src="./resources/3.jpg" alt="">
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="./resources/js/challenge_1.js"></script>
+</body>
+
+</html>
