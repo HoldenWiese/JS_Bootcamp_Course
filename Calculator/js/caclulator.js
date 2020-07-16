@@ -16,14 +16,35 @@ function Input_Digit(digit) {
 }
 
 function Input_Decimal(dot) {
-    if (calculator.Wait_Second_Operand === 'true') return;
+    if (calculator.Wait_Second_Operand === true) return;
     if (!calculator.Display_Value.includes(dot)) {
         calculator.Display_Value += dot;
     }
 }
 
+// function Handle_Operator(Next_Operator) {
+//     const {First_Operand, Display_Value, operator} = calculator;
+//     const Value_of_Input = parseFloat(Display_Value);
+//     if (operator && calculator.Wait_Second_Operand) {
+//         calculator.operator = Next_Operator;
+//         return;
+//     }
+//     if (First_Operand == null) {
+//         calculator.First_Operand = Value_of_Input;
+//     } else if (operator) {
+//         const Value_Now = First_Operand || 0;
+//         const result = Perform_Calculation[operator](Value_Now, Value_of_Input);
+
+//         calculator.Display_Value = String(result);
+//         calculator.First_Operand = result;
+//     }
+
+//     calculator.Wait_Second_Operand = true;
+//     calculator.operator = Next_Operator;
+// }
+
 function Handle_Operator(Next_Operator) {
-    const {First_Operand, Display_Value, operator} = calculator;
+    const { First_Operand, Display_Value, operator } = calculator;
     const Value_of_Input = parseFloat(Display_Value);
     if (operator && calculator.Wait_Second_Operand) {
         calculator.operator = Next_Operator;
@@ -33,13 +54,15 @@ function Handle_Operator(Next_Operator) {
         calculator.First_Operand = Value_of_Input;
     } else if (operator) {
         const Value_Now = First_Operand || 0;
-        const result = Perform_Calculation[operator](Value_Now, Value_of_Input);
-
-        calculator.Display_Value = String(result);
-        calculator.First_Operand = result;
-    }
-
-    calculator.Wait_Second_Operand = true;
+        //change const to let
+        let result = Perform_Calculation[operator](Value_Now, Value_of_Input);
+        //add fixed amount of numbers after decimal
+        result = Number(result).toFixed(9)
+        //remove any trailing 0's
+        result = (result * 1).toString()
+        //remove string cast. It's converted already in above line
+        calculator.Display_Value = result; calculator.First_Operand = result;
+    } calculator.Wait_Second_Operand = true;
     calculator.operator = Next_Operator;
 }
 

@@ -10,7 +10,8 @@
 			<h2>Get The Latest Content:</h2>
 			<div class='content' id="content">
 				<input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();"/>
-			</div>
+            </div>
+        </div>
 		<script type="text/javascript">
 			
             // Step 1: Setup the xml http request object
@@ -19,7 +20,7 @@
                 fooAjax.open('GET', './content.html');
             // Step 3: define the ajax response callback method
                 fooAjax.onreadystatechange = function() {
-                    if (fooAjax.readyState = 4) {
+                    if (fooAjax.readyState == 4) {
                         document.getElementById('content').innerHTML = fooAjax.responseText;
                     }
                 }
